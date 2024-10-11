@@ -1,4 +1,4 @@
-# Crypto Service Stats
+# Crypto Stats Service
 
 ## Project Description
 
