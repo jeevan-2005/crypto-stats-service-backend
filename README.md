@@ -1,4 +1,4 @@
-# Crypto Price Monitor
+# Crypto Service Stats
 
 ## Project Description
 
