@@ -16,7 +16,7 @@ This project is a server-side application built using Node.js and MongoDB. It mo
    - Query Parameter: `coin`
    - Example:
      ```bash
-     http://localhost:8000/api/crypto/stats?coin=bitcoin
+     https://crypto-stats-service-backend.onrender.com/api/crypto/stats?coin=bitcoin
      ```
    - The API returns the latest price, market cap, and 24-hour change for the requested cryptocurrency.
    - Example Response:
@@ -33,7 +33,7 @@ This project is a server-side application built using Node.js and MongoDB. It mo
    - Query Parameter: `coin`
    - Example:
      ```bash
-     http://localhost:8000/api/crypto/deviation?coin=bitcoin
+     https://crypto-stats-service-backend.onrender.com/api/crypto/deviation?coin=bitcoin
      ```
    - The API calculates the standard deviation of the price of the requested cryptocurrency based on the last 100 records stored in the database.
    - Example Response:
