@@ -33,7 +33,7 @@ const calculateStandardDeviation = catchAsyncError(async (req, res, next) => {
   try {
     const coin = req.query.coin;
 
-    const lastest100Records = await Crypto.find({ coin })
+    const lastest100Records = await CryptoModel.find({ coin })
       .sort({ timestamp: -1 })
       .limit(100);
 
@@ -43,7 +43,7 @@ const calculateStandardDeviation = catchAsyncError(async (req, res, next) => {
     const variance =
       prices.reduce((acc, price) => acc + (price - mean) ** 2, 0) /
       prices.length;
-    const stdDeviation = variance ** 0.5;
+    const stdDeviation = (variance ** 0.5).toFixed(2);
 
     return res.status(200).json({
       success: true,
