@@ -3,6 +3,7 @@ dotenv.config();
 import express from "express";
 import cors from "cors";
 import errorMiddleware from "./middlewares/error.middleware.js";
+import cryptoRouter from "./routes/crypto.routes.js";
 
 export const app = express();
 
@@ -15,7 +16,7 @@ app.use(
 );
 
 // routes
-
+app.use("/api/crypto", cryptoRouter);
 
 app.get("/health-check", (req, res, next) => {
   res.status(200).json({
